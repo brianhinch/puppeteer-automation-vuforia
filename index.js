@@ -102,7 +102,7 @@ fs.readdir(SOURCE_DIR, (err, files) => {
 
                 // check for errors
                 const errorElements = await page.$('.errorMessage');
-                if (errorElements.length > 0) {
+                if (errorElements?.length > 0) {
                     for (errorMessage of errorElements) {
                         console.err(errorMessage);
                     }
